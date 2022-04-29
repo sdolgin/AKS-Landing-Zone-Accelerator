@@ -58,7 +58,7 @@ jobs:
     - name: Terraform Apply 04-Network-Hub
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       working-directory: ./Scenarios/Secure-Baseline/Terraform/04-Network-Hub
-      run: terraform apply -auto-approve -var="hub_prefix=escs-hub location=eastus admin_password=${{ secrets.ADMIN_PASSWORD }}"
+      run: terraform apply -auto-approve -var="hub_prefix=escs-hub" -var="location=eastus" -var="admin_password=${{ secrets.ADMIN_PASSWORD }}"
 
     # Change the backend-config variables to match the storage account used for your deployments.
     - name: Terraform Init 05-Network-LZ
@@ -90,7 +90,7 @@ jobs:
     - name: Terraform Apply 06-AKS-supporting
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       working-directory: ./Scenarios/Secure-Baseline/Terraform/06-AKS-supporting
-      run: terraform apply -auto-approve
+      run: terraform apply -auto-approve -var="hub_prefix=escs-hub" -var="location=eastus" -var="admin_password=${{ secrets.ADMIN_PASSWORD }}"
 
   terraform-AKS:
     name: Terraform-AKS
