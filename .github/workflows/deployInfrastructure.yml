@@ -104,6 +104,7 @@ jobs:
       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       TF_VAR_access_key: ${{ secrets.ACCESS_KEY }}
       TF_VAR_state_sa_name: sdolginakslz
+      TF_LOG: TRACE
       TFSTATE_RG: tfstate
       STORAGEACCOUNTNAME: sdolginakslz
       CONTAINERNAME: akscs
