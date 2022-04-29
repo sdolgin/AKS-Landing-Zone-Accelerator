@@ -21,7 +21,7 @@ jobs:
       TF_VAR_lz_prefix: escs-lz01
       TF_VAR_prefix: akscs
       TF_VAR_state_sa_name: sdolginakslz
-      TF_VAR_container_name: container_name
+      TF_VAR_container_name: akscs
       TF_LOG: TRACE
       TFSTATE_RG: tfstate
       STORAGEACCOUNTNAME: sdolginakslz
