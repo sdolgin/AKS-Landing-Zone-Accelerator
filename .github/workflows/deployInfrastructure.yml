@@ -18,9 +18,9 @@ jobs:
       TF_VAR_hub_prefix: escs-hub
       TF_VAR_lz_prefix: eg escs-lz01
       TF_VAR_prefix: akscs
-      TF_VAR_state_sa_name: sdolginaks
+      TF_VAR_state_sa_name: sdolginakslz
       TFSTATE_RG: tfstate
-      STORAGEACCOUNTNAME: sdolginaks
+      STORAGEACCOUNTNAME: sdolginakslz
       CONTAINERNAME: akscs
     runs-on: ubuntu-latest
     environment: production
@@ -100,9 +100,9 @@ jobs:
       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUB_ID }}
       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       TF_VAR_access_key: ${{ secrets.ACCESS_KEY }}
-      TF_VAR_state_sa_name: sdolginaks
+      TF_VAR_state_sa_name: sdolginakslz
       TFSTATE_RG: tfstate
-      STORAGEACCOUNTNAME: sdolginaks
+      STORAGEACCOUNTNAME: sdolginakslz
       CONTAINERNAME: akscs
     runs-on: ubuntu-latest
     environment: production
