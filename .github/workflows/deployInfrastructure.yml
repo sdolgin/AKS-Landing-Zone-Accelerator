@@ -106,6 +106,7 @@ jobs:
       TF_VAR_access_key: ${{ secrets.ACCESS_KEY }}
       TF_VAR_state_sa_name: sdolginakslz
       TF_VAR_container_name: akscs
+      TF_VAR_prefix: akscs
       TF_LOG: TRACE
       TFSTATE_RG: tfstate
       STORAGEACCOUNTNAME: sdolginakslz
